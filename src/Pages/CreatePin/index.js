@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Auth from '../../Layout/Auth';
 import { PinInput, PinInputField } from '@chakra-ui/react';
 import '../../Styles/Pages/auth.css';
-import { createPinService } from '../../services/auth';
+import { createPinService } from '../../Services/auth';
 import '../../Styles/Pages/CreatePin/CreatePin.css'
 
 

@@ -18,7 +18,7 @@ import TopUpInstruction from "../../Components/TopUp";
 
 // CSS
 import '../../Styles/Pages/TopUp/TopUp.css'
-import { topUpService } from "../../services/topUp";
+import { topUpService } from "../../Services/topUp";
 import { Input, PinInputField, PinInput } from "@chakra-ui/react";
 
 const TopUp = () => {

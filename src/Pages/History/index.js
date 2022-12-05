@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { getHistoryService } from "../../services/history";
+import { getHistoryService } from "../../Services/history";
 
 // Bootstrap
 import Container from 'react-bootstrap/Container';
@@ -13,38 +13,51 @@ import Sidebar from "../../Components/Sidebar";
 import Footer from "../../Components/Footer";
 import UserTranscation from "../../Components/User";
 
+//Service
+import { getListTransactionHistory } from "../../Services/history";
 // CSS
 import '../../Styles/Pages/History/History.css'
 
 const History = () => {
+  const userId = localStorage.getItem("userId")
   // Data Users
-  const listUsers = [
-    // {
-    //   picture: "https://i.pravatar.cc/50?img=3",
-    //   name: "Samuel Suhi",
-    //   transaction: "Transfer",
-    //   nominal: "+ Rp 50.000"
-    // },
-    // {
-    //   picture: "https://i.pravatar.cc/50?img=4",
-    //   name: "IntelliJ",
-    //   transaction: "Subcription",
-    //   nominal: "- Rp 80.000"
-    // },
-    // {
-    //   picture: "https://i.pravatar.cc/50?img=1",
-    //   name: "Christine Mar...",
-    //   transaction: "Transfer",
-    //   nominal: "+ Rp 90.000"
-    // },
-    // {
-    //   picture: "https://i.pravatar.cc/50?img=2",
-    //   name: "Netflix",
-    //   transaction: "Subcription",
-    //   nominal: "+ Rp 30.000"
-    // }
+  const [listUsers, setListUsers] = useState([])
 
-  ]
+  useEffect(()=>{
+    const getList = async () => {
+      const listTransaction = await getListTransactionHistory(userId)
+
+      setListUsers(listTransaction)
+    }
+    getList()
+  },[userId])
+  // const listUsers = [
+  //   // {
+  //   //   picture: "https://i.pravatar.cc/50?img=3",
+  //   //   name: "Samuel Suhi",
+  //   //   transaction: "Transfer",
+  //   //   nominal: "+ Rp 50.000"
+  //   // },
+  //   // {
+  //   //   picture: "https://i.pravatar.cc/50?img=4",
+  //   //   name: "IntelliJ",
+  //   //   transaction: "Subcription",
+  //   //   nominal: "- Rp 80.000"
+  //   // },
+  //   // {
+  //   //   picture: "https://i.pravatar.cc/50?img=1",
+  //   //   name: "Christine Mar...",
+  //   //   transaction: "Transfer",
+  //   //   nominal: "+ Rp 90.000"
+  //   // },
+  //   // {
+  //   //   picture: "https://i.pravatar.cc/50?img=2",
+  //   //   name: "Netflix",
+  //   //   transaction: "Subcription",
+  //   //   nominal: "+ Rp 30.000"
+  //   // }
+
+  // ]
 
   return (
     <>

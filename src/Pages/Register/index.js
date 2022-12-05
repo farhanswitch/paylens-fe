@@ -8,7 +8,7 @@ import {BsEnvelope} from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {AiFillLock,AiOutlineEye,AiOutlineEyeInvisible} from "react-icons/ai"
-import { registerService } from '../../services/auth';
+import { registerService } from '../../Services/auth';
 
 const eye = <AiOutlineEye/>
 const eyeClose = <AiOutlineEyeInvisible/>

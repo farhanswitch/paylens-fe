@@ -3,7 +3,7 @@ import Auth from '../../Layout/Auth';
 import { CiLock } from 'react-icons/ci';
 import { useNavigate, useParams } from 'react-router-dom';
 import {AiOutlineEye,AiOutlineEyeInvisible} from "react-icons/ai"
-import { changePasswordService } from '../../services/changePassword';
+import { changePasswordService } from '../../Services/changePassword';
 const eye = <AiOutlineEye/>
 const eyeClose = <AiOutlineEyeInvisible/>
 

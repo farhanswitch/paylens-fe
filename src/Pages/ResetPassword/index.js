@@ -3,8 +3,8 @@ import Auth from '../../Layout/Auth';
 import '../../Styles/Pages/auth.css';
 import {BsEnvelope} from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-import { changePasswordService } from '../../services/changePassword';
-import { sendEmailService } from '../../services/mail';
+import { changePasswordService } from '../../Services/changePassword';
+import { sendEmailService } from '../../Services/mail';
 // import { Button } from '@chakra-ui/react';
 
 const ResetPass = () => {
